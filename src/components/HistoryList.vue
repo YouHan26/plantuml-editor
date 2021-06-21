@@ -1,7 +1,6 @@
 <template>
   <div class="row historyList" :style="style">
     <div class="col-sm-12">
-      <div class="alert alert-default" v-if="!histories.length">When you press the Save button, it will be added to the history.</div>
       <div class="thumbnail" v-for="history in histories" :key="history.id">
         <img v-lazy="createUrl(history.encodedText)" @click="read(history.text, $event)" height="200" width="100%" />
         <div class="caption">
